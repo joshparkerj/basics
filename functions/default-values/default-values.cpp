@@ -7,20 +7,12 @@ int get_attacked(int health, int armor, int damage) {
     return new_health;
 }
 
-int get_punched(int health, int armor) {
+int get_punched(int health, int armor=0) {
     return get_attacked(health, armor, 50);
 }
 
-int get_punched(int health) {
-    return get_punched(health, 0);
-}
-
-int get_slashed(int health, int armor) {
+int get_slashed(int health, int armor=0) {
     return get_attacked(health, armor, 100);
-}
-
-int get_slashed(int health) {
-    return get_slashed(health, 0);
 }
 
 // Don't touch below this line
